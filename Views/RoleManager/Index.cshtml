@@ -1,0 +1,11 @@
+﻿@model IEnumerable< Microsoft.AspNetCore.Identity.IdentityRole>
+<a asp-action="CreateProfile" asp-controller="MangerUser">Add</a>
+@foreach(var item in Model){
+    <div>
+        @item.Name
+    </div>
+    <div class="">
+        <button type="button" class="btn btn-outline-dark btn-ecomm px-5"><i class="bi bi-pencil me-2"></i>Edit</button>
+    </div>
+}
+ 

@@ -330,10 +330,15 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a asp-controller="Category" asp-action="Create" class="nav-link">
+                                    <a asp-controller="Index" asp-action="RoleManager" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>All Role</p>
                                     </a>
+                                </li>
+                                <li class="nav-item">
+                                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                                    </form>
                                 </li>
                             </ul>
                         </li>
