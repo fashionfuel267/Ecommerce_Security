@@ -12,12 +12,14 @@ namespace Ecommerce.Controllers
 		private readonly ApplicationDbContext _db;
 		private readonly IWebHostEnvironment _environment;
         
-
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext db, IWebHostEnvironment environment)
+		private readonly ShoppingCart _shoppingcart;
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext db, 
+			IWebHostEnvironment environment, ShoppingCart cart)
 		{
 			_logger = logger;
             _db = db;
             _environment = environment;
+			_shoppingcart = cart;
         }
 
 		public IActionResult Index()

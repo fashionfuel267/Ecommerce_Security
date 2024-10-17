@@ -22,6 +22,7 @@ namespace Ecommerce
 			options.SignIn.RequireConfirmedAccount = false)
 							.AddEntityFrameworkStores<ApplicationDbContext>();
 			builder.Services.AddControllersWithViews();
+			builder.Services.AddSingleton<ShoppingCart>();
 			builder.Services.AddRazorPages();
 			builder.Services.AddSession();
 			var app = builder.Build();
